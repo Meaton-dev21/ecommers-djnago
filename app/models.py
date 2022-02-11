@@ -34,8 +34,8 @@ class Book(models.Model):
 
 
 class Product(models.Model):
-    product_tag = models.CharField(max_length=10)
     name = models.CharField(max_length=150)
+    product_tag = models.CharField(max_length=10)
     category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
     price = models.IntegerField()
     stock = models.IntegerField()
